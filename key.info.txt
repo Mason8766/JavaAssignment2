@@ -1,0 +1,7 @@
+https://api.rawg.io/api/games?key=2fd12698875a4afb890387e20927f1ab&dates=2019-09-01,2019-09-30&platforms=18,1,7
+
+
+
+2fd12698875a4afb890387e20927f1ab
+
+https://rawg.io/api/games/portal-2?key=2fd12698875a4afb890387e20927f1ab
