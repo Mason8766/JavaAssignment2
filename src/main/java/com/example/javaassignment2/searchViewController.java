@@ -40,7 +40,7 @@ public class searchViewController {
     void searchGame(ActionEvent event) throws IOException, InterruptedException {
 
         try{
-            getMoviesFromAPI("blah");
+            getMoviesFromAPI(txtSearch.getText());
             RAWGResponse test = getGamesFromJSON();
             if (test.getName() == null)
                 lblError.setText("Game not found");

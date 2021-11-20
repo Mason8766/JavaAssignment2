@@ -35,10 +35,10 @@ public class APIUtility {
         RAWGResponse result = null;
 
         //what game the user is looking for, currently not set up
-        searchText = searchText.replace(" ", "%20");
+        searchText = searchText.replace(" ", "-");
 
-
-        String uri = "https://rawg.io/api/games/metal-gear?key=2fd12698875a4afb890387e20927f1ab";//url to call the json
+//?key=2fd12698875a4afb890387e20927f1ab
+        String uri = "https://rawg.io/api/games/"+searchText+"?key=2fd12698875a4afb890387e20927f1ab";//url to call the json
 
 
 

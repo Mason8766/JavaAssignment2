@@ -4,9 +4,9 @@ import com.google.gson.annotations.SerializedName;
 
 public class RAWGResponse {
     private int id;
-    private String slug,name,released,website,background_image;
+    private String slug,name,released,background_image;
     private double rating;
-
+    private String website = "blank";
     @SerializedName("description_raw")
     private String description;
     public int getId() {
