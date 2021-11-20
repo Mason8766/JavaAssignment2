@@ -38,7 +38,7 @@ public class APIUtility {
         searchText = searchText.replace(" ", "%20");
 
 
-        String uri = "https://rawg.io/api/games/Call-of-duty-black-ops?key=2fd12698875a4afb890387e20927f1ab";//url to call the json
+        String uri = "https://rawg.io/api/games/metaaaal-gear?key=2fd12698875a4afb890387e20927f1ab";//url to call the json
 
 
 

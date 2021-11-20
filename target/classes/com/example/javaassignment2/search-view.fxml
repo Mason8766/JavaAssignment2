@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="456.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaassignment2.searchViewController">
+   <children>
+      <Label fx:id="lblTitle" layoutX="77.0" layoutY="111.0" prefHeight="102.0" prefWidth="697.0" text="Welcome to Games on the Go!">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSubTitle" layoutX="269.0" layoutY="187.0" text="The one stop shop for video game details">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblInstruction" layoutX="266.0" layoutY="296.0" text="Search the name of your favorite game, and GO!">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSearch" layoutX="668.0" layoutY="322.0" mnemonicParsing="false" onAction="#searchGame" prefHeight="37.0" prefWidth="106.0" text="Search" />
+      <Label fx:id="lblError" layoutX="77.0" layoutY="382.0" prefHeight="50.0" prefWidth="561.0" textFill="#ff0b0b">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSearch" layoutX="159.0" layoutY="328.0" onAction="#searchGame" prefHeight="25.0" prefWidth="498.0" />
+   </children>
+</AnchorPane>
