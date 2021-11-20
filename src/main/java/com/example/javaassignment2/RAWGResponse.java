@@ -1,24 +1,20 @@
 package com.example.javaassignment2;
 
+import com.google.gson.annotations.SerializedName;
+
 public class RAWGResponse {
-    private int id,metacritic;
-    private String slug,name,description,released,website,background_image;
+    private int id;
+    private String slug,name,released,website,background_image;
     private double rating;
 
+    @SerializedName("description_raw")
+    private String description;
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getMetacritic() {
-        return metacritic;
-    }
-
-    public void setMetacritic(int metacritic) {
-        this.metacritic = metacritic;
     }
 
     public String getSlug() {
