@@ -73,7 +73,7 @@ public class RAWGResponse {
 
     public void setReleased(String released) {
 
-        if (released.length() == 0){
+        if (released == null ||released.length() == 0 ){
             this.released = "";
         }
         else{
@@ -118,6 +118,7 @@ public class RAWGResponse {
     }
 
     public void setRating(double rating) {
+
         if(rating>0 && rating <=5)
             this.rating = rating;
         else
