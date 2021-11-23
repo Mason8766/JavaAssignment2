@@ -38,8 +38,10 @@ public class searchViewController {
 
     @FXML
     void searchGame(ActionEvent event) throws IOException, InterruptedException {
-
+//22
         try{
+            if (txtSearch.getText()=="")
+                txtSearch.setText(".");
             getMoviesFromAPI(txtSearch.getText());
             RAWGResponse test = getGamesFromJSON();
             if (test.getName() == null)
