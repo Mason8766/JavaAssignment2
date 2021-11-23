@@ -28,8 +28,8 @@ public class APIUtility {
         catch (Exception e){
             e.printStackTrace();
         }
-
-        return results;
+        RAWGResponse object = new RAWGResponse(results.getId(), results.getSlug(), results.getName(), results.getReleased(),results.getBackground_image(), results.getRating(), results.getWebsite(),results.getDescription());
+        return object;
     }
     public static RAWGResponse getMoviesFromAPI(String searchText) throws IOException, InterruptedException {// throws IOException, InterruptedException
         RAWGResponse result = null;

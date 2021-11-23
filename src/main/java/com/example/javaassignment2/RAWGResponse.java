@@ -2,19 +2,38 @@ package com.example.javaassignment2;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.time.LocalDate;
+import java.time.Year;
+
 public class RAWGResponse {
     private int id;
-    private String slug,name,released,background_image;
+    private String slug, name, released, background_image;
     private double rating;
     private String website = "blank";
     @SerializedName("description_raw")
     private String description;
+
+
+    public RAWGResponse(int id, String slug, String name, String released, String background_image, double rating, String website, String description) {
+        setId(id);
+        setSlug(slug);
+        setName(name);
+        setReleased(released);
+        setBackground_image(background_image);
+        setRating(rating);
+        setWebsite(website);
+        setDescription(description);
+    }
+
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
-        this.id = id;
+        if (id > 0)
+            this.id = id;
+        else
+            throw new IllegalArgumentException("Id must be bigger than 1 ");
     }
 
     public String getSlug() {
@@ -22,7 +41,10 @@ public class RAWGResponse {
     }
 
     public void setSlug(String slug) {
-        this.slug = slug;
+        if (slug.length() > 0)
+            this.slug = slug;
+        else
+            throw new IllegalArgumentException("The slug must be longer than 1 ");
     }
 
     public String getName() {
@@ -30,6 +52,10 @@ public class RAWGResponse {
     }
 
     public void setName(String name) {
+        if (name.length() > 0)
+            this.name = name;
+        else
+            throw new IllegalArgumentException("The name must be longer than 1 ");
         this.name = name;
     }
 
@@ -37,7 +63,7 @@ public class RAWGResponse {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(String description) {//no validation, some games may not have a description
         this.description = description;
     }
 
@@ -46,15 +72,34 @@ public class RAWGResponse {
     }
 
     public void setReleased(String released) {
-        this.released = released;
+
+        if (released.length() == 0){
+            this.released = "";
+        }
+        else{
+
+            LocalDate date = LocalDate.parse(released);
+            LocalDate oldDate = LocalDate.parse("1950-01-01");
+            if (date.isAfter(oldDate) && date.isBefore(LocalDate.now()))
+                this.released = released;
+            else
+                throw new IllegalArgumentException("The date cannot be before 1950, and cannot be after the current date");
+
+      }
     }
+
+
 
     public String getWebsite() {
         return website;
     }
 
     public void setWebsite(String website) {
-        this.website = website;
+        if (website.contains("https") == true)
+            this.website = website;
+        else
+            this.website = "";
+
     }
 
     public String getBackground_image() {
@@ -62,7 +107,10 @@ public class RAWGResponse {
     }
 
     public void setBackground_image(String background_image) {
-        this.background_image = background_image;
+        if (background_image.contains("https") == true)
+            this.background_image = background_image;
+        else
+            this.background_image = "";
     }
 
     public double getRating() {
@@ -70,23 +118,10 @@ public class RAWGResponse {
     }
 
     public void setRating(double rating) {
-        this.rating = rating;
+        if(rating>0 && rating <=5)
+            this.rating = rating;
+        else
+            throw new IllegalArgumentException("The rating must be greater than zero, and no bigger than 5");
     }
-    /*
-    "id": 22508,
-            "slug": "overwatch",
-            "name": "Overwatch",
-
-            "description": "<h3>The Legacy</h3>\n<p>Overwatch is a multiplayer first-person shooter from the company that gave players the saga of Azeroth, Starcraft and the Diablo universe. Despite these releases coming out years ago, they are still alive and actively updated. But the developers at Blizzard wanted something new: the company does not like to experiment with new settings, preferring to transfer existing characters to new genres, worlds, and situations. The exception, perhaps, can only be a game about the three Vikings—The Lost Vikings, but this, too, was a long time ago.</p>\n<h3>The story and setting</h3>\n<p>Anyway, the company Blizzard has approached the development of Overwatch with team-specific meticulousness to details and desire to create an elaborative game universe. The player faces a choice between 21 characters who were part of the elite Overwatch unit. The task of Overwatch soldiers is to protect the Earth from conflicts and external threats. But something goes wrong, and the team of heroes breaks up. Despite the multiplayer bias, the game has a full story, it combines all the characters and maps on which the battle takes place. Since the launch, seven new characters have been added to the hero pool. Blizzard tells the story of the world of Overwatch through their characters: almost everyone has an animated short film, comparable in quality to a full meter from, for example, Pixar.</p>\n<h3>Continuous support</h3>\n<p>The game won the hearts of players around the world immediately after the launch. The figures confirm this fact: more than half a million dollars from sales and more than 40 million players. Overwatch has become an anchor project for Activision Blizzard, and the company continues to develop the project two years later, constantly offering players new maps, new characters, new themed events, and new cosmetic skins.</p>",
-            "metacritic": 91,
-
-            "released": "2016-05-24",
-
-
-            "background_image": "https://media.rawg.io/media/games/4ea/4ea507ceebeabb43edbc09468f5aaac6.jpg",
-
-            "website": "https://playoverwatch.com",
-            "rating": 4.24,
-            "developers": [],*/
 
 }
