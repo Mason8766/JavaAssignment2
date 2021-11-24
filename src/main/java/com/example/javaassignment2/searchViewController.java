@@ -58,9 +58,10 @@ public class searchViewController{
     @FXML
     void searchGame(ActionEvent event) throws IOException, InterruptedException {
 //22
+
         if (txtSearch.getText().length() >0 ){
         try{
-
+            btnDetails.setDisable(true);
             getMoviesFromAPI(txtSearch.getText());
             RAWGResponse test = getGamesFromJSON();
             if (test.getName() == null)

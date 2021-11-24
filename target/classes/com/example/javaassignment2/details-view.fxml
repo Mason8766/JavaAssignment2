@@ -10,32 +10,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="456.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaassignment2.detailViewController">
+<AnchorPane prefHeight="456.0" prefWidth="850.0" stylesheets="@styles.css"  xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaassignment2.detailViewController">
    <children>
-      <VBox layoutX="14.0" layoutY="50.0" prefHeight="386.0" prefWidth="398.0">
+      <VBox fx:id="vbox" layoutX="14.0" layoutY="50.0" prefHeight="386.0" prefWidth="398.0" stylesheets="@styles.css" >
          <children>
             <HBox prefHeight="49.0" prefWidth="397.0" spacing="8.0">
                <children>
-                  <Label text="Name:">
+                  <Label fx:id="lblNameL" text="Name:" textFill="WHITE">
                      <font>
                         <Font size="27.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblName" prefHeight="39.0" prefWidth="282.0" text="Label">
-                     <font>
-                        <Font size="27.0" />
-                     </font>
-                  </Label>
-               </children>
-            </HBox>
-            <HBox prefHeight="62.0" prefWidth="372.0" spacing="8.0">
-               <children>
-                  <Label text="Released:">
-                     <font>
-                        <Font size="27.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="lblRelease" text="Label">
+                  <Label fx:id="lblName" prefHeight="39.0" prefWidth="282.0" text="Label" textFill="#ffcb3b">
                      <font>
                         <Font size="27.0" />
                      </font>
@@ -44,32 +30,46 @@
             </HBox>
             <HBox prefHeight="62.0" prefWidth="372.0" spacing="8.0">
                <children>
-                  <Label text="Website:">
+                  <Label fx:id="lblReleasedL" text="Released:" textFill="WHITE">
                      <font>
                         <Font size="27.0" />
                      </font>
                   </Label>
-                  <Hyperlink fx:id="lblWebsite" onAction="#openLink" prefHeight="63.0" prefWidth="261.0" style="-fx-focus-color: transparent;" text="Hyperlink" />
+                  <Label fx:id="lblRelease" text="Label" textFill="#ffcb3b">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
                </children>
             </HBox>
             <HBox prefHeight="62.0" prefWidth="372.0" spacing="8.0">
                <children>
-                  <Label text="Rating">
+                  <Label fx:id="lblWebsiteL" text="Website:" textFill="WHITE">
                      <font>
                         <Font size="27.0" />
                      </font>
                   </Label>
-                  <Label fx:id="lblRating" text="Label">
+                  <Hyperlink fx:id="lblWebsite" onAction="#openLink" prefHeight="63.0" prefWidth="261.0" stylesheets="@styles.css" text="Hyperlink" />
+               </children>
+            </HBox>
+            <HBox prefHeight="62.0" prefWidth="372.0" spacing="8.0">
+               <children>
+                  <Label fx:id="lblRatingL" text="Rating" textFill="WHITE">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblRating" text="Label" textFill="#ffcb3b">
                      <font>
                         <Font size="27.0" />
                      </font>
                   </Label>
                </children>
             </HBox>
-            <TextArea fx:id="txtDescription" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+            <TextArea fx:id="txtDescription" editable="false" prefHeight="200.0" prefWidth="200.0" wrapText="true" stylesheets="@styles.css"/>
          </children>
       </VBox>
       <ImageView fx:id="imgGameImage" fitHeight="292.0" fitWidth="398.0" layoutX="420.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="btnReturn" layoutX="627.0" layoutY="397.0" mnemonicParsing="false" onAction="#returnSearch" prefHeight="39.0" prefWidth="131.0" text="Return" />
+      <Button fx:id="btnReturn" layoutX="627.0" layoutY="397.0" mnemonicParsing="false" onAction="#returnSearch" prefHeight="39.0" prefWidth="131.0"  stylesheets="@styles.css" text="Return" />
    </children>
 </AnchorPane>

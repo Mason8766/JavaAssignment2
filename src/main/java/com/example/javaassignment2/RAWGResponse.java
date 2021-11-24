@@ -119,7 +119,7 @@ public class RAWGResponse {
 
     public void setRating(double rating) {
 
-        if(rating>0 && rating <=5)
+        if(rating>=0 && rating <=5)
             this.rating = rating;
         else
             throw new IllegalArgumentException("The rating must be greater than zero, and no bigger than 5");

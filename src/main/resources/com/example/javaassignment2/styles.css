@@ -1,0 +1,20 @@
+#vbox{
+-fx-border-color: black;
+-fx-border-width: 7px;
+}
+#lblWebsite{
+-fx-focus-color: transparent;
+}
+#txtDescription{
+-fx-font-family: serif;
+}
+#btnReturn, #btnSearch, #btnDetails{
+-fx-font-family: monospace;
+}
+#txtSearch{
+-fx-border-color: black;
+-fx-background-radius: 5px;
+}
+.root {
+    -fx-background-color: green
+}
