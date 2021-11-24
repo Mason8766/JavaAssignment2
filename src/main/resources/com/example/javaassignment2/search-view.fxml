@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="456.0" prefWidth="850.0" stylesheets="@styles.css"  xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaassignment2.searchViewController">
+<AnchorPane prefHeight="456.0" prefWidth="850.0" stylesheets="@Extras/styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javaassignment2.Controllers.searchViewController">
    <children>
       <Label fx:id="lblTitle" layoutX="78.0" layoutY="36.0" prefHeight="102.0" prefWidth="697.0" text="Welcome to Games on the Go!" textFill="WHITE">
          <font>
@@ -25,18 +25,18 @@
             <Font size="15.0" />
          </font>
       </Label>
-      <Button fx:id="btnSearch" layoutX="669.0" layoutY="366.0" mnemonicParsing="false" onAction="#searchGame" prefHeight="37.0" prefWidth="78.0" stylesheets="@styles.css"  text="Search" />
+      <Button fx:id="btnSearch" layoutX="669.0" layoutY="366.0" mnemonicParsing="false" onAction="#searchGame" prefHeight="37.0" prefWidth="78.0" stylesheets="@Extras/styles.css" text="Search" />
       <Label fx:id="lblError" layoutX="6.0" layoutY="406.0" prefHeight="50.0" prefWidth="561.0" textFill="#ff0b0b">
          <font>
             <Font size="21.0" />
          </font>
       </Label>
-      <TextField fx:id="txtSearch" layoutX="159.0" layoutY="372.0" onAction="#searchGame" prefHeight="25.0" prefWidth="498.0" stylesheets="@styles.css" />
+      <TextField fx:id="txtSearch" layoutX="159.0" layoutY="372.0" onAction="#searchGame" prefHeight="25.0" prefWidth="498.0" stylesheets="@Extras/styles.css" />
       <ImageView fx:id="imgPoster" fitHeight="176.0" fitWidth="312.0" layoutX="269.0" layoutY="167.0" pickOnBounds="true" AnchorPane.bottomAnchor="113.0" AnchorPane.leftAnchor="269.0" AnchorPane.rightAnchor="269.0" AnchorPane.topAnchor="167.0">
          <viewport>
             <Rectangle2D />
          </viewport>
       </ImageView>
-      <Button fx:id="btnDetails" disable="true" layoutX="758.0" layoutY="366.0" mnemonicParsing="false" onAction="#DetailsClicked" prefHeight="37.0" prefWidth="78.0" stylesheets="@styles.css"  text="Details" />
+      <Button fx:id="btnDetails" disable="true" layoutX="758.0" layoutY="366.0" mnemonicParsing="false" onAction="#DetailsClicked" prefHeight="37.0" prefWidth="78.0" stylesheets="@Extras/styles.css" text="Details" />
    </children>
 </AnchorPane>

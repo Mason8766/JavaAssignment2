@@ -1,10 +1,11 @@
-package com.example.javaassignment2;
+package com.example.javaassignment2.Controllers;
 
 
+import com.example.javaassignment2.HelloApplication;
+import com.example.javaassignment2.Models.RAWGResponse;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -12,15 +13,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
-import static com.example.javaassignment2.APIUtility.getGamesFromJSON;
-import static com.example.javaassignment2.APIUtility.getMoviesFromAPI;
+import static com.example.javaassignment2.Utilities.APIUtility.getGamesFromJSON;
+import static com.example.javaassignment2.Utilities.APIUtility.getMoviesFromAPI;
 
 public class searchViewController{
 

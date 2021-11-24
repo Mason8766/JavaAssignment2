@@ -1,5 +1,6 @@
-package com.example.javaassignment2;
+package com.example.javaassignment2.Utilities;
 
+import com.example.javaassignment2.Models.RAWGResponse;
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 
@@ -14,7 +15,7 @@ import java.nio.file.Paths;
 
 public class APIUtility {
     //creating a object based of the JsonAPI file.
-    public static  RAWGResponse getGamesFromJSON(){
+    public static RAWGResponse getGamesFromJSON(){
         Gson gson = new Gson();
         RAWGResponse results = null;
 
